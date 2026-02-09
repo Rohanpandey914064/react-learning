@@ -1,0 +1,21 @@
+h1{
+    background-color: red;
+    border: 2px solid white;
+    margin: 40px ;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.form-style{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+    border: 1px solid white;
+    border-radius: 10%;
+}
+    
+input{
+    border: 1px solid white;
+    border-radius: 25%;
+}
