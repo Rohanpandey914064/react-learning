@@ -3,8 +3,8 @@ import ToDoList from "./ToDoLIst"
 function App() {
   return (
     <>
-      {/* <ToDoList/> */}
-      <Counter/>
+      <ToDoList/>
+      {/* <Counter/> */}
     </>
   )
 }
