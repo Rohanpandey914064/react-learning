@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import Component from './component.jsx'
 import Component2 from './Component2.jsx';
 
 function App() {
