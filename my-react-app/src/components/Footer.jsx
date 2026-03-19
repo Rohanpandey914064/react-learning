@@ -1,4 +1,4 @@
-export default function Footer1(ob){
+export default function Footer(ob){
 
     return (
         <footer>
