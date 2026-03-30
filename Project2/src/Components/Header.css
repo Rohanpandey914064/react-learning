@@ -1,0 +1,9 @@
+.boxs{
+    border-bottom: 5px solid var(--border);
+    background-color: yellow;
+}
+
+h3{
+    color: white;
+
+}

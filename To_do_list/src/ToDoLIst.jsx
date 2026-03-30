@@ -25,6 +25,8 @@ export default function EventToDo()
       prevTasks.filter((_, i) => i !== index)
     );
   }
+
+ 
     return(
         <div className="todo-container">
       <h1>To Do List</h1>

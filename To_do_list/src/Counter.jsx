@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import {useState,useEffect} from 'react'
 
 export default function Counter()
 {
@@ -21,7 +21,10 @@ export default function Counter()
         }
         setCount(count - 1);
     }
+
+    useEffect(() => {console.log("counter work");}, [count]);
     return(
+
         <>
         <h1>Counter App</h1>
         <h3>Count = {count}</h3>
