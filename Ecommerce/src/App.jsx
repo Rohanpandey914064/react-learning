@@ -1,8 +1,10 @@
 // import { useState } from "react";
+
 // import Header from "./Components/Header";
 // import ProductList from "./Components/ProductList";
 // import "./App.css";
 // import Cart from "./Components/ProductCart";
+// import Navbar from "./Components/Navbar";
 // export default function App() {
 //   const [cart,setCart] = useState([]);
 //   const [totalAmt,setTotalAmt] = useState(0); 
@@ -41,22 +43,58 @@
 //   return(
 //     <div>
 //       <Header cart={cart.length} totalAmount={totalAmt}/>
-//       <ProductList products={product} addToCart={addToCart}/>
+//       <Navbar products={product}/>
+
+//       {/* <ProductList products={product} addToCart={addToCart}/> */}
 //       {/* <h2>Total Amount: ₹{totalAmount}</h2> */}
 //       {/* <Cart cart={cart} removeFromCart={removeFromCart} totalAmount={totalAmount}/> */}
 //     </div>
 //   )
 // };
 
-import { useEffect } from "react";
-import './App.css';
 
-export default function App() {
-  useEffect(()=>{console.log("Welcome")},[]);
+
+
+
+
+
+import { useContext } from 'react';
+import { ThemeContext,UserContext,LangContext, GlobalContext } from "./context";
+const App = () => {
+
+  // const [theme,toggleTheme] = useContext(ThemeContext);
+  // const [user,setUser] = useContext(UserContext);
+  // const [lang,setLang] = useContext(LangContext);
+
+  // const { theme, toggleTheme } = useContext(ThemeContext);
+  // const { user, setUser } = useContext(UserContext);
+  // const { lang, setLang } = useContext(LangContext);
+  const {state,dispatch} = useContext(GlobalContext);
+  const {theme,user,lang} = state;
 
   return (
     <div>
-      <h1>My App</h1>
+      {/* <p>Theme:{theme}</p>
+      <p>User:{user.name}</p>
+      <p>Lang:{lang}</p>
+
+      <button onClick={toggleTheme}>ThemeChange</button>
+      <button onClick={()=>setLang("ENGLISH")}>english</button>
+      <button onClick={()=>setLang("HINDI")}>hindi</button>
+      <button onClick={()=>setUser({name:"Rohan rock"})}>rohan</button>
+      <button onClick={()=>setUser({name:"Arnav baba ki jay"})}>Arnav</button> */}
+
+      <p>Theme:{theme}</p>
+      <p>User:{user.name}</p>
+      <p>Lang:{lang}</p>
+
+      <button onClick={()=>dispatch({type:"TOGGLE_THEME"})}>ThemeChange</button>
+      {/* <button onClick={()=>setLang("ENGLISH")}>english</button>
+      <button onClick={()=>setLang("HINDI")}>hindi</button>
+      <button onClick={()=>setUser({name:"Rohan rock"})}>rohan</button>
+      <button onClick={()=>setUser({name:"Arnav baba ki jay"})}>Arnav</button> */}
     </div>
-  );
+  )
 }
+
+export default App
