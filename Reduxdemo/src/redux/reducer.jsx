@@ -1,5 +1,7 @@
 const initialstate = {
-  todo: []
+  todo: [],
+  user:"rohan pandey",
+  theme:"light"
 }
 
 export const todoreducer = (state = initialstate, action) => {
@@ -7,7 +9,7 @@ export const todoreducer = (state = initialstate, action) => {
     case "ADD_TODO":
       return {
         ...state,
-        todo: [...state.todo, action.payload],
+        todo: [...state.todo, {id:Date.now(),text:action.payload,completed: false}],
       }
 
     case "DELETE_TODO":
@@ -20,9 +22,7 @@ export const todoreducer = (state = initialstate, action) => {
       return {
         ...state,
         todo: state.todo.map(item =>
-          item.id === action.payload
-            ? { ...item, completed: !item.completed }
-            : item
+          item.id === action.payload ? { ...item, completed: !item.completed }: item
         ),
       }
 
