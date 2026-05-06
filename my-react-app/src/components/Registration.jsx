@@ -2,7 +2,6 @@ import "./Header.css"
 
 export default function Registration() {
     return(
-        <>
         <form action="onSubmit" className="form-style">
             <label>Name - </label>
             <input type="text" placeholder="Enter Name" />
@@ -13,6 +12,5 @@ export default function Registration() {
 
             <button>submit</button>
         </form>
-        </>
     )
 }

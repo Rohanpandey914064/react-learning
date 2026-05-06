@@ -8,7 +8,7 @@ export default function App(){
       <h1>hello</h1>
       <Header title="rohan mahan"/>
       <Registration></Registration>
-      <Footer ob=""/>
+      {/* <Footer ob=""/> */}
     </div>
   )
 }

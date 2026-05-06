@@ -5,6 +5,5 @@ export default function Header({title}){
         <header>
             <h1>{title}</h1>
         </header>
-        
     )
 }
